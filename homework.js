@@ -71,3 +71,25 @@
 
 // Write a function called gcd that takes two arguments and returns the greatest common
 // divisor using the instructions above.
+
+function gcd(intOne,intTwo){
+    let gcd = 1;
+    if(intOne > intTwo){
+        
+        for(let i = 1; i < intTwo; i++){
+            if(intTwo % i === 0 && intOne % i === 0){
+                gcd = i;
+            }
+        }
+    }else if(intOne < intTwo){
+        for(let i = 1; i < intOne; i++){
+            if(intTwo % i === 0 && intOne % i === 0){
+                gcd = i;
+            }
+        }
+    }else{
+        gcd = intOne;
+    }
+
+    return gcd;
+}
